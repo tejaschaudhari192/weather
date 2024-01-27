@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    color: white;
+    font-family: 'P';
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    transition: all 1s linear;
+
+}
+
+
+.root {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+
+}
+
+
+
+#bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    background-image: url('img/s2.webp');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: 1;
+    opacity: 0.8;
+    transition: all 2s;
+    scale: 1.2;
+
+}
+
+#main-block {
+    position: absolute;
+    width: 620px;
+    height: 550px;
+    background-color: black;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.062);
+    scale: 1.1;
+
+}
+
+#weather-main {
+    position: absolute;
+    width: inherit;
+    height: 60%;
+    background-color: blue;
+    border-radius: inherit;
+    /* background-image: url('img/s2.webp'); */
+    background-size: cover;
+    z-index: -1;
+    transition: all 1s;
+}
+
+
+.dt {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    font-size: 20px;
+}
+
+.temp {
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    font-size: 100px;
+}
+
+.input-box input[type="text"] {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 200px;
+    font-size: 25px;
+    background: transparent;
+    /* background-color: transparent; */
+    /* border: none transparent; */
+    /* box-shadow: none; */
+    border: none;
+    z-index: 100;
+    outline: none;
+    caret-color: violet;
+    animation: typing 3.5s steps(30, end);
+    /* cursor: none; */
+
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+/* input:focus-visible{
+    outline: none;
+} */
+
+/* 
+    input[type="text"]
+    {
+    background: transparent;
+    border: none;
+    } */
+
+.icon {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 100px;
+}
+
+.desc {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    font-size: 20px;
+}
+
+
+.other {
+    width: inherit;
+    height: fit-content;
+    position: absolute;
+    top: 73%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+}
+
+
+.other-elements {
+    letter-spacing: 1px;
+
+    padding: 0 7%;
+    border-right: 3px solid rgba(255, 255, 255, 0.483);
+
+    & span {
+        font-size: 35px;
+    }
+}
